@@ -38,7 +38,8 @@ const EXPERIENCES = [
 
 export default function ExperienceSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
+    // [수정] bg-secondary/30 삭제함 -> 투명해져서 글로벌 배경색(#1a1a1a)이 그대로 보임
+    <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Mail } from 'lucide-react'
 
 interface NavigationProps {
   onNavigate: {
@@ -49,11 +48,26 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <button
                 key={item.label}
                 onClick={item.onClick}
-                className="text-foreground hover:text-primary transition-colors text-sm font-medium"
+                className="
+                  text-foreground text-sm font-medium
+                  cursor-pointer
+                  transition-all duration-300
+                  hover:text-primary
+                  hover:scale-110
+                  hover:font-bold
+                "
               >
                 {item.label}
               </button>
             ))}
+             {/* Contact 버튼 추가가 필요하다면 아래 주석을 해제하여 사용하세요 */}
+             {/* <button 
+                onClick={() => setShowContactModal(true)}
+                className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors"
+             >
+                Contact
+             </button> 
+             */}
           </div>
         </div>
       </nav>
@@ -79,6 +93,7 @@ function ContactModal({ onClose }: { onClose: () => void }) {
     setIsLoading(true)
     
     try {
+      // 실제 API 엔드포인트가 구현되어 있어야 동작합니다.
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

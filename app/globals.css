@@ -4,91 +4,65 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* [수정 포인트]
-     배경(background) 밝기를 0.12 -> 0.25로 올렸습니다.
-     이제 완전 검정이 아니라 "짙은 회색(차콜)" 느낌이 납니다.
-  */
+  /* [확실한 Soft Black 테마 - HEX 코드 사용] */
   
-  /* 기본 배경: 짙은 회색 (차콜색) */
-  --background: oklch(0.25 0 0);       
-  /* 글씨: 거의 흰색 */
-  --foreground: oklch(0.98 0 0);       
+  /* 배경: #1a1a1a (눈이 편안한 진한 다크 그레이) */
+  --background: #1a1a1a;
   
-  /* 카드/박스 배경: 배경보다 살짝 더 밝은 회색 */
-  --card: oklch(0.32 0 0);             
-  --card-foreground: oklch(0.98 0 0);
+  /* 글씨: 흰색에 가까운 회색 */
+  --foreground: #ededed;
   
-  --popover: oklch(0.32 0 0);
-  --popover-foreground: oklch(0.98 0 0);
+  /* 카드: 배경보다 조금 더 밝은 회색 (#262626) */
+  --card: #262626;
+  --card-foreground: #ededed;
   
-  /* 주요 버튼: 흰색으로 강조 */
-  --primary: oklch(0.98 0 0);          
-  --primary-foreground: oklch(0.25 0 0); 
+  --popover: #262626;
+  --popover-foreground: #ededed;
   
-  /* 보조 배경: 카드보다 조금 더 밝은 회색 */
-  --secondary: oklch(0.35 0 0);        
-  --secondary-foreground: oklch(0.98 0 0);
+  --primary: #ededed;
+  --primary-foreground: #1a1a1a;
   
-  /* 덜 중요한 텍스트 등 */
-  --muted: oklch(0.35 0 0);
-  --muted-foreground: oklch(0.7 0 0);  
+  --secondary: #333333;
+  --secondary-foreground: #ededed;
   
-  --accent: oklch(0.35 0 0);
-  --accent-foreground: oklch(0.98 0 0);
+  --muted: #333333;
+  --muted-foreground: #a1a1aa;
   
-  /* 에러 색상 (빨강) */
-  --destructive: oklch(0.4 0.2 25);   
-  --destructive-foreground: oklch(0.98 0 0);
+  --accent: #333333;
+  --accent-foreground: #ededed;
   
-  /* 테두리 선: 배경과 비슷하지만 살짝 구분되는 색 */
-  --border: oklch(0.35 0 0);           
-  --input: oklch(0.35 0 0);
-  --ring: oklch(0.8 0 0);
+  --destructive: #991b1b;
+  --destructive-foreground: #ededed;
   
-  --chart-1: oklch(0.8 0 0);
-  --chart-2: oklch(0.7 0 0);
-  --chart-3: oklch(0.6 0 0);
-  --chart-4: oklch(0.5 0 0);
-  --chart-5: oklch(0.4 0 0);
+  /* 테두리: 은은한 회색 */
+  --border: #333333;
+  --input: #333333;
+  --ring: #d4d4d8;
   
   --radius: 0.625rem;
 }
 
 .dark {
-  /* 다크 모드 설정도 위와 비슷하게 맞춤 */
-  --background: oklch(0.25 0 0);
-  --foreground: oklch(0.98 0 0);
-  
-  --card: oklch(0.32 0 0);
-  --card-foreground: oklch(0.98 0 0);
-  
-  --popover: oklch(0.32 0 0);
-  --popover-foreground: oklch(0.98 0 0);
-  
-  --primary: oklch(0.98 0 0);
-  --primary-foreground: oklch(0.25 0 0);
-  
-  --secondary: oklch(0.35 0 0);
-  --secondary-foreground: oklch(0.98 0 0);
-  
-  --muted: oklch(0.35 0 0);
-  --muted-foreground: oklch(0.7 0 0);
-  
-  --accent: oklch(0.35 0 0);
-  --accent-foreground: oklch(0.98 0 0);
-  
-  --destructive: oklch(0.4 0.2 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  
-  --border: oklch(0.35 0 0);
-  --input: oklch(0.35 0 0);
-  --ring: oklch(0.8 0 0);
-  
-  --chart-1: oklch(0.8 0 0);
-  --chart-2: oklch(0.7 0 0);
-  --chart-3: oklch(0.6 0 0);
-  --chart-4: oklch(0.5 0 0);
-  --chart-5: oklch(0.4 0 0);
+  /* 다크 모드도 강제로 동일한 색상 적용 */
+  --background: #1a1a1a;
+  --foreground: #ededed;
+  --card: #262626;
+  --card-foreground: #ededed;
+  --popover: #262626;
+  --popover-foreground: #ededed;
+  --primary: #ededed;
+  --primary-foreground: #1a1a1a;
+  --secondary: #333333;
+  --secondary-foreground: #ededed;
+  --muted: #333333;
+  --muted-foreground: #a1a1aa;
+  --accent: #333333;
+  --accent-foreground: #ededed;
+  --destructive: #991b1b;
+  --destructive-foreground: #ededed;
+  --border: #333333;
+  --input: #333333;
+  --ring: #d4d4d8;
 }
 
 @theme inline {
@@ -113,57 +87,26 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  /* [중요] body에 강제로 배경색 주입 */
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--background);
+    color: var(--foreground);
   }
 }
 
-/* globals.css 맨 아래에 추가 */
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* app/globals.css 맨 아래 추가 */
-
-/* app/globals.css */
-
+/* 애니메이션 유지 */
 @keyframes float {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  25% {
-    transform: translate(20px, 25px) rotate(4deg); /* 거리를 늘림 */
-  }
-  50% {
-    transform: translate(-10px, 40px) rotate(-4deg);
-  }
-  75% {
-    transform: translate(-30px, 10px) rotate(2deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(20px, 25px) rotate(4deg); }
+  50% { transform: translate(-10px, 40px) rotate(-4deg); }
+  75% { transform: translate(-30px, 10px) rotate(2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
 }
 
 .animate-float {
