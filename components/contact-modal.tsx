@@ -16,6 +16,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   })
   const [isLoading, setIsLoading] = useState(false)
   const [successMessage, setSuccessMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -28,6 +29,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
+    setErrorMessage('')
 
     try {
       const response = await fetch('/api/send-email', {
@@ -38,17 +40,21 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         body: JSON.stringify(formData),
       })
 
-      if (response.ok) {
+      const data = await response.json()
+
+      if (response.ok && data.success) {
         setSuccessMessage('메시지가 성공적으로 전송되었습니다!')
         setFormData({ name: '', email: '', message: '' })
         setTimeout(() => {
           setSuccessMessage('')
           onClose()
         }, 2000)
+      } else {
+        setErrorMessage(data.error || '메시지 전송에 실패했습니다.')
       }
     } catch (error) {
       console.error('Error sending email:', error)
-      alert('메시지 전송에 실패했습니다.')
+      setErrorMessage('네트워크 오류가 발생했습니다. 다시 시도해주세요.')
     } finally {
       setIsLoading(false)
     }
@@ -73,6 +79,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           {successMessage && (
             <div className="bg-green-100 text-green-800 p-3 rounded-lg">
               {successMessage}
+            </div>
+          )}
+
+          {errorMessage && (
+            <div className="bg-red-100 text-red-800 p-3 rounded-lg">
+              {errorMessage}
             </div>
           )}
 

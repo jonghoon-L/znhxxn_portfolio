@@ -10,7 +10,7 @@ const PROJECTS = [
     description: '커스텀 모바일 청첩장 서비스',
     image: '/wedding-invitation-service.jpg',
     logo: '/woogyeol-logo.png',
-    video: '/woogyeol-demo.mp4', 
+    video: '/woogyeol-demo.gif', 
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'React-Query', 'Zustand'],
     link: '/project/1',
     infoBgClass: 'bg-gradient-to-br from-purple-200 to-blue-200', 
@@ -22,6 +22,7 @@ const PROJECTS = [
     description: '디지털 디톡스 서비스',
     image: '/digital-detox-service.jpg',
     logo: '/minu-logo.svg',
+    videos: ['/minu-demo1.gif', '/minu-demo2.gif'], // 순차 재생
     tech: ['Next.js', 'Firebase', 'Recoil', 'TypeScript', 'Tailwind CSS'],
     link: '/project/2',
     infoBgClass: 'bg-[#7CA3FF]',
