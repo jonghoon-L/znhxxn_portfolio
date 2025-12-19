@@ -67,14 +67,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       <div className="bg-card rounded-lg shadow-lg max-w-md w-full mx-4 relative">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
+          className="absolute top-4 right-4 text-muted-foreground hover:text-white hover:scale-110 transition-all duration-200 cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
 
         <div className="p-6 space-y-4">
           <h2 className="text-2xl font-bold text-foreground">연락하기</h2>
-          <p className="text-muted-foreground">궁금한 점이 있으시면 편하게 연락 주세요!</p>
+          <p className="text-white">궁금한 점이 있으시면 편하게 연락 주세요!</p>
 
           {successMessage && (
             <div className="bg-green-100 text-green-800 p-3 rounded-lg">
@@ -137,7 +137,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-primary text-primary-foreground py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors disabled:opacity-50"
+              className="w-full bg-white text-black py-2 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 cursor-pointer hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
               {isLoading ? '전송 중...' : '메시지 보내기'}
             </button>

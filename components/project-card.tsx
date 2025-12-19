@@ -81,7 +81,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   }, [currentVideoIndex, videos.length, currentVideo]);
 
   return (
-    <div className="group bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
+    <div className="group bg-gray-200 rounded-xl overflow-hidden border border-gray-300 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
       
       {/* 1. 상단 미디어 영역 (영상/GIF or 이미지) */}
       <div className="relative h-[24rem] w-full overflow-hidden bg-white flex items-center justify-center">
@@ -132,7 +132,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex items-center gap-4 mt-2 mb-5">
           
           {/* 로고 박스 */}
-          <div className={`relative w-20 h-20 rounded-xl overflow-hidden shrink-0 shadow-sm ${isColoredSection ? 'bg-white/80 border-white/60' : 'bg-zinc-800 border-zinc-700'}`}>
+          <div className={`relative w-20 h-20 rounded-xl overflow-hidden shrink-0 shadow-sm ${isColoredSection ? 'bg-white/80 border-white/60' : 'bg-gray-200 border-gray-300'}`}>
             {project.logo ? (
               <Image
                 src={project.logo}
@@ -141,15 +141,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 className={`object-contain ${project.logoPadding || 'p-1'}`} 
               />
             ) : (
-              <div className="w-full h-full flex items-center justify-center text-xs text-zinc-500">Logo</div>
+              <div className="w-full h-full flex items-center justify-center text-xs text-gray-500">Logo</div>
             )}
           </div>
           
           <div className="flex flex-col justify-center">
-            <h3 className="text-xl font-bold text-gray-900 leading-tight mb-1">
+            <h3 className={`text-xl font-bold leading-tight mb-1 ${isColoredSection ? 'text-gray-900' : 'text-gray-900'}`}>
               {project.title}
             </h3>
-            <p className="text-sm text-gray-700 leading-snug">
+            <p className={`text-sm leading-snug ${isColoredSection ? 'text-gray-700' : 'text-gray-700'}`}>
               {project.description}
             </p>
           </div>
@@ -160,7 +160,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.tech.map((tech) => (
             <span 
               key={tech} 
-              className={`px-3 py-1 text-xs font-medium rounded-full ${isColoredSection ? 'bg-white text-black shadow-sm' : 'bg-zinc-800 text-zinc-300'}`}
+              className={`px-3 py-1 text-xs font-medium rounded-full ${isColoredSection ? 'bg-white text-black shadow-sm' : 'bg-gray-200 text-gray-900 border border-gray-300'}`}
             >
               {tech}
             </span>
@@ -170,10 +170,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {/* 4. 자세히 보기 버튼 (하단 고정) */}
         <div className="mt-auto">
           <Link href={project.link || `/project/${project.id}`} className="block">
-            <button className={`w-full py-1 rounded-lg font-bold text-sm transition-colors shadow-sm ${
+            <button className={`w-full py-1 rounded-lg font-bold text-sm transition-all duration-200 cursor-pointer hover:scale-105 shadow-sm ${
                 isColoredSection 
                   ? 'bg-white text-black hover:bg-white/80' 
-                  : 'bg-zinc-800 text-zinc-100 hover:bg-zinc-700'
+                  : 'bg-gray-800 text-white hover:bg-gray-700'
               }`}>
               자세히 보기
             </button>

@@ -4,65 +4,65 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* [확실한 Soft Black 테마 - HEX 코드 사용] */
+  /* [남색 테마 - 짙은 네이비 블루 배경] */
   
-  /* 배경: #1a1a1a (눈이 편안한 진한 다크 그레이) */
-  --background: #1a1a1a;
+  /* 배경: 짙은 남색/네이비 블루 */
+  --background: #0f172a;
   
-  /* 글씨: 흰색에 가까운 회색 */
-  --foreground: #ededed;
+  /* 글씨: 밝은 회색/흰색 */
+  --foreground: #e8f0f8;
   
-  /* 카드: 배경보다 조금 더 밝은 회색 (#262626) */
-  --card: #262626;
-  --card-foreground: #ededed;
+  /* 카드: 약간 밝은 남색 */
+  --card: #1e293b;
+  --card-foreground: #e8f0f8;
   
-  --popover: #262626;
-  --popover-foreground: #ededed;
+  --popover: #1e293b;
+  --popover-foreground: #e8f0f8;
   
-  --primary: #ededed;
-  --primary-foreground: #1a1a1a;
+  --primary: #60a5fa;
+  --primary-foreground: #0f172a;
   
-  --secondary: #333333;
-  --secondary-foreground: #ededed;
+  --secondary: #334155;
+  --secondary-foreground: #e8f0f8;
   
-  --muted: #333333;
-  --muted-foreground: #a1a1aa;
+  --muted: #334155;
+  --muted-foreground: #a5c9f0;
   
-  --accent: #333333;
-  --accent-foreground: #ededed;
+  --accent: #475569;
+  --accent-foreground: #e8f0f8;
   
-  --destructive: #991b1b;
-  --destructive-foreground: #ededed;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
   
-  /* 테두리: 은은한 회색 */
-  --border: #333333;
-  --input: #333333;
-  --ring: #d4d4d8;
+  /* 테두리: 남색 */
+  --border: #334155;
+  --input: #334155;
+  --ring: #60a5fa;
   
   --radius: 0.625rem;
 }
 
 .dark {
-  /* 다크 모드도 강제로 동일한 색상 적용 */
-  --background: #1a1a1a;
-  --foreground: #ededed;
-  --card: #262626;
-  --card-foreground: #ededed;
-  --popover: #262626;
-  --popover-foreground: #ededed;
-  --primary: #ededed;
-  --primary-foreground: #1a1a1a;
-  --secondary: #333333;
-  --secondary-foreground: #ededed;
-  --muted: #333333;
-  --muted-foreground: #a1a1aa;
-  --accent: #333333;
-  --accent-foreground: #ededed;
-  --destructive: #991b1b;
-  --destructive-foreground: #ededed;
-  --border: #333333;
-  --input: #333333;
-  --ring: #d4d4d8;
+  /* 다크 모드도 강제로 동일한 색상 적용 (짙은 남색 테마) */
+  --background: #0f172a;
+  --foreground: #e8f0f8;
+  --card: #1e293b;
+  --card-foreground: #e8f0f8;
+  --popover: #1e293b;
+  --popover-foreground: #e8f0f8;
+  --primary: #60a5fa;
+  --primary-foreground: #0f172a;
+  --secondary: #334155;
+  --secondary-foreground: #e8f0f8;
+  --muted: #334155;
+  --muted-foreground: #a5c9f0;
+  --accent: #475569;
+  --accent-foreground: #e8f0f8;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #334155;
+  --ring: #60a5fa;
 }
 
 @theme inline {

@@ -33,7 +33,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="relative min-h-[90vh] pt-20 pb-10 px-4 sm:px-6 lg:px-8 bg-background flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] pt-32 pb-32 px-4 sm:px-6 lg:px-8 bg-background flex items-center overflow-hidden">
         
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full z-10">
           
@@ -44,10 +44,10 @@ export default function HeroSection() {
             animate="visible"
           >
             <motion.div className="space-y-4" variants={itemVariants}>
-              <h1 className="text-5xl sm:text-6xl lg:text-6xl font-bold text-foreground leading-tight">
+              <h1 className="text-5xl sm:text-6xl lg:text-6xl font-bold text-white leading-tight">
                 이종훈
               </h1>
-              <p className="text-2xl sm:text-3xl text-primary font-semibold">
+              <p className="text-2xl sm:text-3xl text-white font-semibold">
                 Backend Developer
               </p>
             </motion.div>
@@ -63,7 +63,7 @@ export default function HeroSection() {
               className="grid grid-cols-2 gap-4 pt-4 max-w-xl"
               variants={containerVariants}
             >
-              {/* [수정] 모든 버튼: 흰색 배경(bg-white), 검은 글씨(text-black) */}
+              {/* 모든 버튼: 회색 배경(bg-gray-200), 검은색 글씨(text-gray-900) */}
               
               {/* 1. 프로젝트 보기 */}
               <motion.button 
@@ -71,11 +71,11 @@ export default function HeroSection() {
                 onClick={() => document.querySelector('[data-projects]')?.scrollIntoView({ behavior: 'smooth' })}
                 className="
                   cursor-pointer 
-                  bg-white text-black border border-zinc-200
+                  bg-gray-200 text-gray-900 border border-gray-300
                   px-6 py-3 rounded-lg font-semibold 
                   flex items-center justify-center gap-2 
                   transition-all duration-300 
-                  hover:bg-zinc-200 hover:scale-105 hover:shadow-lg
+                  hover:bg-gray-300 hover:scale-105 hover:shadow-lg
                 "
               >
                 <BookUser className="w-4 h-4" />
@@ -88,11 +88,11 @@ export default function HeroSection() {
                 onClick={() => setIsContactOpen(true)}
                 className="
                   cursor-pointer 
-                  bg-white text-black border border-zinc-200
+                  bg-gray-200 text-gray-900 border border-gray-300
                   px-6 py-3 rounded-lg font-semibold 
                   flex items-center justify-center gap-2 
                   transition-all duration-300 
-                  hover:bg-zinc-200 hover:scale-105 hover:shadow-lg
+                  hover:bg-gray-300 hover:scale-105 hover:shadow-lg
                 "
               >
                 <Mail className="w-4 h-4" />
@@ -107,11 +107,11 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="
                   cursor-pointer 
-                  bg-white text-black border border-zinc-200
+                  bg-gray-200 text-gray-900 border border-gray-300
                   px-6 py-3 rounded-lg font-semibold 
                   flex items-center justify-center gap-2 
                   transition-all duration-300 
-                  hover:bg-zinc-200 hover:scale-105 hover:shadow-lg
+                  hover:bg-gray-300 hover:scale-105 hover:shadow-lg
                 "
               >
                 <Github className="w-4 h-4" />
@@ -126,11 +126,11 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="
                   cursor-pointer 
-                  bg-white text-black border border-zinc-200
+                  bg-gray-200 text-gray-900 border border-gray-300
                   px-6 py-3 rounded-lg font-semibold 
                   flex items-center justify-center gap-2 
                   transition-all duration-300 
-                  hover:bg-zinc-200 hover:scale-105 hover:shadow-lg
+                  hover:bg-gray-300 hover:scale-105 hover:shadow-lg
                 "
               >
                 <BookOpen className="w-4 h-4" />

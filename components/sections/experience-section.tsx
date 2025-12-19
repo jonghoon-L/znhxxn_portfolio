@@ -38,71 +38,76 @@ const EXPERIENCES = [
 
 export default function ExperienceSection() {
   return (
-    // [수정] bg-secondary/30 삭제함 -> 투명해져서 글로벌 배경색(#1a1a1a)이 그대로 보임
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+    <section>
+      {/* 제목 부분 - 회색 배경 (전체 너비) */}
+      <div className="bg-gray-200 pt-12 pb-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center">
             활동 경험
           </h2>
         </div>
+      </div>
 
-        <div className="space-y-8">
-          {EXPERIENCES.map((exp, idx) => (
-            <div key={exp.id} className="relative">
-              {idx !== EXPERIENCES.length - 1 && (
-                <div className="absolute left-8 top-24 bottom-0 w-0.5 bg-border" />
-              )}
-              
-              <div className="flex gap-6">
-                <div className="relative z-10">
-                  <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg">
-                    {exp.status === '완료' ? '✓' : '진행중'}
-                  </div>
-                </div>
-
-                <div className="flex-1 bg-card border border-border rounded-lg p-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground">
-                        {exp.title}
-                      </h3>
-                      <p className="text-sm text-primary font-semibold mt-1">
-                        {exp.period}
-                      </p>
+      {/* 내용 부분 - 옅은 회색 배경 (전체 너비) */}
+      <div className="bg-gray-200 pt-8 pb-32">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-8">
+            {EXPERIENCES.map((exp, idx) => (
+              <div key={exp.id} className="relative">
+                {idx !== EXPERIENCES.length - 1 && (
+                  <div className="absolute left-8 top-24 bottom-0 w-0.5 bg-gray-300" />
+                )}
+                
+                <div className="flex gap-6">
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gray-800 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                      {exp.status === '완료' ? '✓' : '진행중'}
                     </div>
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
-                      {exp.status}
-                    </span>
                   </div>
 
-                  <p className="text-muted-foreground mb-4">
-                    {exp.description}
-                  </p>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-foreground mb-2">성과:</h4>
-                    <ul className="space-y-1">
-                      {exp.results.map((result, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-start gap-2">
-                          <span className="text-primary mt-1">→</span>
-                          <span>{result}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {exp.tags.map((tag) => (
-                      <span key={tag} className="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-medium">
-                        {tag}
+                  <div className="flex-1 bg-gray-50 border border-gray-200 rounded-lg p-6">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900">
+                          {exp.title}
+                        </h3>
+                        <p className="text-sm text-gray-600 font-semibold mt-1">
+                          {exp.period}
+                        </p>
+                      </div>
+                      <span className="px-3 py-1 bg-gray-200 text-gray-800 text-xs font-semibold rounded-full">
+                        {exp.status}
                       </span>
-                    ))}
+                    </div>
+
+                    <p className="text-gray-700 mb-4">
+                      {exp.description}
+                    </p>
+
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-900 mb-2">성과:</h4>
+                      <ul className="space-y-1">
+                        {exp.results.map((result, idx) => (
+                          <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
+                            <span className="text-gray-600 mt-1">→</span>
+                            <span>{result}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      {exp.tags.map((tag) => (
+                        <span key={tag} className="bg-gray-200 text-gray-800 px-2 py-1 rounded text-xs font-medium">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

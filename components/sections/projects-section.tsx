@@ -11,7 +11,7 @@ const PROJECTS = [
     image: '/wedding-invitation-service.jpg',
     logo: '/woogyeol-logo.png',
     video: '/woogyeol-demo.gif', 
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'React-Query', 'Zustand'],
+    tech: ['Express.js', 'TypeScript', 'AWS', 'Koyeb', 'MySQL', 'Sentry'],
     link: '/project/1',
     infoBgClass: 'bg-gradient-to-br from-purple-200 to-blue-200', 
     logoPadding: 'p-2',
@@ -23,7 +23,7 @@ const PROJECTS = [
     image: '/digital-detox-service.jpg',
     logo: '/minu-logo.svg',
     videos: ['/minu-demo1.gif', '/minu-demo2.gif'], // 순차 재생
-    tech: ['Next.js', 'Firebase', 'Recoil', 'TypeScript', 'Tailwind CSS'],
+    tech: ['Spring Boot', 'Java', 'AWS', 'MySQL', 'GitHub Actions', 'Docker'],
     link: '/project/2',
     infoBgClass: 'bg-[#7CA3FF]',
     logoPadding: 'p-0',
@@ -49,29 +49,42 @@ const itemVariants = {
 
 export default function ProjectsSection() {
   return (
-    // [수정] bg-secondary/30 삭제함 -> 이제 투명해져서 글로벌 배경색(진회색)이 보임!
-    <section data-projects className="py-20 px-4 sm:px-6 lg:px-8">
-      <motion.div 
-        className="max-w-6xl mx-auto"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <motion.div className="mb-16 text-center" variants={itemVariants}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            My Projects
-          </h2>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {PROJECTS.map((project) => (
-            <motion.div key={project.id} variants={itemVariants}>
-              <ProjectCard project={project} />
-            </motion.div>
-          ))}
+    <section data-projects>
+      {/* 제목 부분 - 회색 배경 (전체 너비) */}
+      <div className="bg-gray-200 pt-12 pb-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <motion.div 
+            className="text-center"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <motion.h2 className="text-2xl sm:text-3xl font-bold text-gray-900" variants={itemVariants}>
+              My Projects
+            </motion.h2>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
+
+      {/* 프로젝트 카드 부분 - 옅은 회색 배경 (전체 너비) */}
+      <div className="bg-gray-200 pt-12 pb-20">
+        <motion.div 
+          className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {PROJECTS.map((project) => (
+              <motion.div key={project.id} variants={itemVariants}>
+                <ProjectCard project={project} />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </section>
   )
 }

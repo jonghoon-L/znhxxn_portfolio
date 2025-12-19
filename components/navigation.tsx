@@ -13,16 +13,7 @@ interface NavigationProps {
 }
 
 export default function Navigation({ onNavigate }: NavigationProps) {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [showContactModal, setShowContactModal] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const navItems = [
     { label: 'Home', onClick: onNavigate.home },
@@ -33,13 +24,9 @@ export default function Navigation({ onNavigate }: NavigationProps) {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-background/80 backdrop-blur-md border-b border-border' 
-          : 'bg-background'
-      }`}>
+      <nav className="fixed top-0 w-full z-50 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-primary hover:text-primary/80 transition-colors">
+          <Link href="/" className="text-xl font-bold text-white cursor-default">
             Portfolio
           </Link>
           
@@ -49,10 +36,10 @@ export default function Navigation({ onNavigate }: NavigationProps) {
                 key={item.label}
                 onClick={item.onClick}
                 className="
-                  text-foreground text-sm font-medium
+                  text-white text-sm font-medium
                   cursor-pointer
                   transition-all duration-300
-                  hover:text-primary
+                  hover:text-gray-300
                   hover:scale-110
                   hover:font-bold
                 "
