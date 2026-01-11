@@ -19,7 +19,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
     { label: 'Home', onClick: onNavigate.home },
     { label: 'Projects', onClick: onNavigate.projects },
     { label: 'Skills', onClick: onNavigate.skills },
-    { label: 'About', onClick: onNavigate.experience },
+    { label: 'Experiences', onClick: onNavigate.experience },
   ]
 
   return (

@@ -35,23 +35,29 @@ const itemVariants = {
   }
 }
 
-export default function SkillsSection() {
+interface SkillsSectionProps {
+  titleRef?: React.RefObject<HTMLDivElement>
+}
+
+export default function SkillsSection({ titleRef }: SkillsSectionProps) {
   const [activeCategory, setActiveCategory] = useState<Category>('Frontend')
   const categories = Object.keys(SKILLS_BY_CATEGORY) as Category[]
 
   return (
     <section>
       {/* 제목 부분 - 남색 배경 (전체 너비) */}
-      <div className="bg-background pt-12 pb-4">
+      <div ref={titleRef as React.RefObject<HTMLDivElement>} className="bg-background pt-12 pb-4">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white text-center">
+          <h2 
+            className="text-2xl sm:text-3xl font-bold text-white text-center"
+          >
             기술 스택
           </h2>
         </div>
       </div>
 
       {/* 내용 부분 - 남색 배경 (전체 너비) */}
-      <div className="bg-background pt-12 pb-2">
+      <div className="bg-background pt-12 pb-32">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
             {categories.map((category) => (

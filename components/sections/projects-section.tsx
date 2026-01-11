@@ -47,11 +47,15 @@ const itemVariants = {
   }, 
 }
 
-export default function ProjectsSection() {
+interface ProjectsSectionProps {
+  titleRef?: React.RefObject<HTMLDivElement>
+}
+
+export default function ProjectsSection({ titleRef }: ProjectsSectionProps) {
   return (
     <section data-projects>
       {/* 제목 부분 - 회색 배경 (전체 너비) */}
-      <div className="bg-gray-200 pt-12 pb-4">
+      <div ref={titleRef as React.RefObject<HTMLDivElement>} className="bg-gray-200 pt-12 pb-4">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
           <motion.div 
             className="text-center"
@@ -60,7 +64,10 @@ export default function ProjectsSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <motion.h2 className="text-2xl sm:text-3xl font-bold text-gray-900" variants={itemVariants}>
+            <motion.h2 
+              className="text-2xl sm:text-3xl font-bold text-gray-900" 
+              variants={itemVariants}
+            >
               My Projects
             </motion.h2>
           </motion.div>

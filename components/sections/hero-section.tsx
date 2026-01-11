@@ -6,7 +6,11 @@ import { useState } from 'react'
 import ContactModal from '../contact-modal'
 import { motion } from 'framer-motion'
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  onProjectsClick?: () => void
+}
+
+export default function HeroSection({ onProjectsClick }: HeroSectionProps) {
   const [isContactOpen, setIsContactOpen] = useState(false)
 
   const containerVariants = {
@@ -68,7 +72,7 @@ export default function HeroSection() {
               {/* 1. 프로젝트 보기 */}
               <motion.button 
                 variants={itemVariants}
-                onClick={() => document.querySelector('[data-projects]')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={onProjectsClick || (() => document.querySelector('[data-projects]')?.scrollIntoView({ behavior: 'smooth' }))}
                 className="
                   cursor-pointer 
                   bg-gray-200 text-gray-900 border border-gray-300

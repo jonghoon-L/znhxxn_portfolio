@@ -463,7 +463,7 @@ export default function ProjectDetailPage() {
                   className="text-2xl font-bold text-gray-900 mb-12 text-center" 
                   variants={itemVariants}
                 >
-                  기술적 문제 및 해결
+                  {isMinu ? '주요 이슈 및 문제 해결' : '기술적 문제 및 해결'}
                 </motion.h2>
                 
                 <div className="space-y-8">
@@ -478,7 +478,7 @@ export default function ProjectDetailPage() {
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-gray-900 mb-6">
-                          {isMinu ? '스크린타임 데이터 수집 및 동기화 문제' : '이미지 로딩 속도 문제'}
+                          {isMinu ? '필드/데스크 리서치를 통한 사용자 니즈 파악' : '이미지 로딩 속도 문제'}
                         </h3>
                         <div className="space-y-4">
                           <div className="bg-gray-50 border-l-4 border-background p-4 rounded">
@@ -487,7 +487,7 @@ export default function ProjectDetailPage() {
                             </p>
                             <p className="text-base text-gray-700 leading-relaxed">
                               {isMinu 
-                                ? '모바일 기기에서 스크린타임 데이터를 실시간으로 수집하고 서버와 동기화하는 과정에서 데이터 불일치 및 지연 문제가 발생했습니다.'
+                                ? '초기 기획 단계에서 디톡스 어플에 대한 사용자의 니즈를 파악하지 못해 기존의 유사 어플들과의 차이점을 두지 못했습니다.'
                                 : '청첩장 특성 상 관리할 이미지가 많아 AWS S3를 통해 관리하였으나, 이미지 로딩 시 속도가 많이 지연되는 문제가 발생했습니다.'}
                             </p>
                           </div>
@@ -497,7 +497,7 @@ export default function ProjectDetailPage() {
                             </p>
                             <p className="text-base text-gray-700 leading-relaxed">
                               {isMinu
-                                ? '백그라운드 작업을 활용하여 주기적으로 스크린타임 데이터를 수집하고, 배치 처리 방식으로 서버와 동기화하도록 개선했습니다. 또한 데이터 검증 로직을 추가하여 불일치 문제를 해결했습니다.'
+                                ? '필드 및 데스크 리서치를 수행하여 유사 서비스에 대한 사용자의 리뷰와 행동 패턴을 분석했습니다. 이를 통해 유료화된 주요 기능과 성취감 부족으로 인한 동기부여 부족이라는 사용자의 경험을 인식하게 되었고, 이를 통해 차별화된 minu만의 기능을 기획할 수 있었습니다.'
                                 : '이미지를 바로 저장하지 않고, 450px로 크기를 줄이고 webp 포맷으로 리사이징한 후 저장하도록 하여 이미지 조회 시 로딩 속도를 약 1~2초 단축할 수 있었습니다.'}
                             </p>
                           </div>
@@ -517,7 +517,7 @@ export default function ProjectDetailPage() {
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-gray-900 mb-6">
-                          {isMinu ? '챌린지 참여자 실시간 상태 관리 문제' : 'POST 요청 시 과도한 데이터 전송 문제'}
+                          {isMinu ? '리서치 기반의 AI 피드백 기능 구현' : 'POST 요청 시 과도한 데이터 전송 문제'}
                         </h3>
                         <div className="space-y-4">
                           <div className="bg-gray-50 border-l-4 border-background p-4 rounded">
@@ -526,7 +526,7 @@ export default function ProjectDetailPage() {
                             </p>
                             <p className="text-base text-gray-700 leading-relaxed">
                               {isMinu
-                                ? '여러 사용자가 동시에 챌린지에 참여할 때 각 참여자의 스크린타임 상태를 실시간으로 관리하고 랭킹을 업데이트하는 과정에서 성능 저하가 발생했습니다.'
+                                ? '필드 리서치 분석 결과 단순한 스크린타임 수치 제공은 사용자에게 일시적인 인지만 줄 뿐, 지속적인 동기부여와 실질적인 생활 패턴의 변화로 이어지지는 못한다는 한계를 발견했습니다.'
                                 : '청첩장 생성 시 모든 값을 한 번에 전송하여 에러 트래킹과 디버깅이 어려웠고, 검증되지 않은 상태에서 요청을 보내는 문제가 있었습니다.'}
                             </p>
                           </div>
@@ -536,7 +536,7 @@ export default function ProjectDetailPage() {
                             </p>
                             <p className="text-base text-gray-700 leading-relaxed">
                               {isMinu
-                                ? '캐싱 전략을 도입하여 랭킹 데이터를 주기적으로 갱신하고, 비동기 처리로 실시간 업데이트 성능을 개선했습니다. 또한 데이터베이스 인덱싱을 최적화하여 조회 속도를 향상시켰습니다.'
+                                ? 'OpenAI GPT API를 연동하여 AI 피드백을 통한 주간 회고 시스템을 구축했습니다. 단순히 일회성 피드백에 그치지 않도록 매주 생성된 피드백 데이터를 DB에 적재하여 관리하였고, 이를 기반으로 지난주 대비 발전 여부를 분석해주는 로직 또한 구현하였습니다. 결과적으로 사용자에게 연속성 있는 성취감을 부여하며 장기적인 디지털 디톡스 참여를 유도할 수 있었습니다.'
                                 : '생성 단계를 나누어 필요한 데이터만 단계별로 전송하도록 API를 개선했습니다. 이를 통해 에러 발생 시 특정 단계에서 확인이 가능해져 디버깅 시간이 단축되었고, 사용자 플로우에도 더 적합한 방식이 되었습니다.'}
                             </p>
                           </div>
