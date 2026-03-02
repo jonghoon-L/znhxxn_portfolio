@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const SKILLS_BY_CATEGORY = {
-  Frontend: ['JavaScript', 'TypeScript', 'React', 'Next.js'],
-  Backend: ['Node.js', 'Express.js', 'SpringBoot', 'JavaScript', 'TypeScript', 'Java', 'AWS EC2', 'AWS S3', 'Git Actions'],
+  Frontend: ['JavaScript', 'TypeScript', 'React', 'React DOM', 'Next.js', 'Tailwind CSS', 'Zustand'],
+  Backend: ['Node.js', 'Express.js', 'SpringBoot', 'JavaScript', 'TypeScript', 'Java', 'AWS EC2', 'AWS S3', 'Git Actions', 'Flyway', 'ORM'],
   Tools: ['GitHub', 'Docker', 'Sentry', 'Slack', 'Zep', 'Notion', 'Discord', 'Swagger'],
   Database: ['Mysql', 'MariaDB', 'H2', 'PostgreSQL']
 }
@@ -51,7 +51,7 @@ export default function SkillsSection({ titleRef }: SkillsSectionProps) {
           <h2 
             className="text-2xl sm:text-3xl font-bold text-white text-center"
           >
-            기술 스택
+            Skills
           </h2>
         </div>
       </div>
