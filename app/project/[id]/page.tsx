@@ -120,34 +120,34 @@ AI 리포트 기능을 통해 자신의 생활 습관에 대해 피드백을 받
 
     features: [
       {
-        title: '공개 안내 페이지',
-        description: '일반 사용자를 위한 독서실 소개 및 안내 콘텐츠를 제공합니다.',
-        video: '/woogyeol1',
+        title: '클라이언트 페이지',
+        description: '시설 소개, 위치 지도, 시스템 안내 등 다양한 정보를 제공합니다.',
+        video: '/로드맵2',
       },
       {
-        title: '관리자 페이지 (이스터에그)',
-        description: '이스터에그 경로로 접근하는 운영·관리 목적의 페이지를 분리해 구성했습니다.',
-        video: '/woogyeol2',
+        title: '이용 후기',
+        description: '관리자가 승인한 후기들을 조회할 수 있으며 개인 후기를 작성할 수 있습니다.',
+        video: '/로드맵3',
       },
       {
-        title: 'Next.js + Spring Boot',
-        description: '프론트엔드는 Next.js·TypeScript·Tailwind CSS, 백엔드는 Spring Boot·Java로 구성했습니다.',
-        video: '/woogyeol3',
+        title: '학업 자료',
+        description: '선생님들이 정리한 자료를 pdf로 다운받을 수 있습니다.',
+        video: '/로드맵4',
       },
       {
-        title: 'AWS 배포',
-        description: '서비스를 AWS 환경에 배포·운영할 수 있도록 구성했습니다.',
-        video: '/woogyeol4',
+        title: '상담 신청',
+        description: '본인 인증 하에 원하는 관, 날짜, 시간에 상담을 신청할 수 있습니다.',
+        video: '/로드맵5',
       },
       {
-        title: '관·페이지별 안내 구조',
-        description: '고2·고3 전용관, N수생 전용관 등 시설 구분에 맞춰 안내 콘텐츠와 메뉴를 구성했습니다.',
-        video: '/woogyeol5',
+        title: '등록 예약',
+        description: '본인 인증 하에 원하는 관, 시즌에 등록을 예약할 수 있습니다.',
+        video: '/로드맵6',
       },
       {
-        title: 'API 연동 관리 화면',
-        description: '관리자 페이지에서 Spring Boot API와 연동해 운영에 필요한 데이터를 조회·처리할 수 있게 했습니다.',
-        video: '/woogyeol6',
+        title: '관리자 시스템',
+        description: '숨겨진 이스터에그를 통해 진입할 수 있으며, 다양한 비즈니스 업무를 수행할 수 있습니다.',
+        video: '/로드맵7',
       },
     ],
 
@@ -198,7 +198,7 @@ export default function ProjectDetailPage() {
     )
   }
 
-  // 우결·Minu·Roadmap 프로젝트는 동일 계열의 특수 레이아웃 (Roadmap은 Minu와 동일 레이아웃·캐러셀·버튼 코드 경로)
+  // 우결·Minu·Roadmap 프로젝트는 동일 계열의 특수 레이아웃 (Roadmap 우측은 Minu와 동일 5/3 슬롯 + 정적 이미지)
   const isWoogyeol = projectId === '1'
   const isMinu = projectId === '2'
   const isRoadmap = projectId === '3'
@@ -402,7 +402,7 @@ export default function ProjectDetailPage() {
                 </div>
 
                 <motion.div className="relative w-full" variants={itemVariants}>
-                  {isMinuLike ? (
+                  {isMinu ? (
                     <div className="relative w-full group" style={{ aspectRatio: '5/3' }}>
                       <div className="absolute inset-0 flex items-start justify-end">
                         <div className="relative" style={{ width: '110%', height: '110%', marginTop: '-5%', marginRight: '-5%' }}>
@@ -431,6 +431,28 @@ export default function ProjectDetailPage() {
                       >
                         <ChevronRight className="w-5 h-5" />
                       </button>
+                    </div>
+                  ) : isRoadmap ? (
+                    <div className="relative w-full" style={{ aspectRatio: '5/3' }}>
+                      <div className="absolute inset-0 flex items-start justify-end">
+                        <div
+                          className="relative rounded-none"
+                          style={{
+                            width: '120%',
+                            height: '120%',
+                            marginTop: '-10%',
+                            marginRight: '-10%',
+                          }}
+                        >
+                          <Image
+                            src="/roadmap1.png"
+                            alt="Roadmap Project"
+                            fill
+                            className="object-contain rounded-none"
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
                     </div>
                   ) : (
                     <Image
