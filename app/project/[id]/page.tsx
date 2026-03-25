@@ -64,10 +64,10 @@ const PROJECT_DETAILS: Record<string, any> = {
     title: 'Minu - 디지털 디톡스 서비스',
     subtitle: '디지털 디톡스 서비스',
     period: '2024.11 ~ 진행중',
-    description: '디지털 디톡스 서비스',
+    description: 'Minu는 디지털 디톡스 서비스로서 개인의 스크린타임을 조회하며 관리할 수 있습니다.',
 
-    overview: `디지털 디톡스 서비스
-AI가 분석한 맞춤형 리포트로 나의 사용 습관을 점검하고, 친구들과의 챌린지를 통해 건강한 일상을 함께 만들어갈 수 있습니다.`,
+    overview: `Minu는 개인의 스크린타임을 관리할 수 있는 디지털 디톡스 서비스입니다. 
+AI 리포트 기능을 통해 자신의 생활 습관에 대해 피드백을 받을 수 있고, 친구들과 디톡스 챌린지를 하며 함께 동기부여를 만들어갈 수 있습니다.`,
     
     tech: ['Spring Boot', 'Java', 'AWS', 'MySQL', 'GitHub Actions'],
     
@@ -108,54 +108,73 @@ AI가 분석한 맞춤형 리포트로 나의 사용 습관을 점검하고, 친
     ]
   },
   '3': {
-    title: 'ShowRoomz',
-    subtitle: '인플루언서 마켓플랫폼',
+    title: 'Roadmap - 입시 관리형 독서실 웹 사이트',
+    subtitle: '입시 관리형 독서실 웹 플랫폼',
     period: '2025.10 ~ 2026.07',
-    description:
-      '인플루언서와 브랜드를 연결하는 마켓플랫폼으로, 캠페인·결제·검색 등 핵심 도메인을 REST API로 설계하고 Flyway 기반 DB 형상 관리와 결제 연동을 구축했습니다.',
+    description: '입시 관리형 독서실 Roadmap 웹 사이트',
 
-    overview: `ShowRoomz는 SNS 인플루언서 기반 마켓 서비스입니다. 브랜드와 크리에이터 간 거래 흐름에 맞춰 API를 설계하고, 전역 페이징 응답 구조로 프론트엔드와의 계약을 단순화했습니다. PortOne을 통한 결제 파이프라인과 다양한 필터 조건을 지원하는 검색 API로 확장 가능한 백엔드를 지향합니다.`,
+    overview: `Roadmap은 실제 입시 관리형 독서실의 비즈니스 관리를 돕는 웹 플랫폼입니다.
+일반 안내 페이지를 통해 예비 등록자들에게 시설과 시스템 정보를 제공할 수 있으며, 특정 이스터에그로 접속하는 숨겨진 관리자 페이지를 통해 운영 업무를 관리할 수 있습니다.`,
 
-    tech: ['Spring Boot', 'TypeScript', 'PostgreSQL', 'Flyway', 'AWS', 'PortOne', 'Vercel'],
+    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Spring Boot', 'Java', 'AWS'],
 
     features: [
       {
-        title: '통일된 페이징·응답 구조',
-        description: '목록 API의 응답 스키마를 표준화하여 클라이언트 타입과 로직을 단순화했습니다.',
+        title: '공개 안내 페이지',
+        description: '일반 사용자를 위한 독서실 소개 및 안내 콘텐츠를 제공합니다.',
+        video: '/woogyeol1',
       },
       {
-        title: 'DB 마이그레이션 자동화',
-        description: 'Flyway로 스키마 변경 이력을 관리하고 팀 협업 시 충돌을 줄였습니다.',
+        title: '관리자 페이지 (이스터에그)',
+        description: '이스터에그 경로로 접근하는 운영·관리 목적의 페이지를 분리해 구성했습니다.',
+        video: '/woogyeol2',
       },
       {
-        title: '결제 연동',
-        description: 'PortOne API를 활용해 결제 플로우를 구성했습니다.',
+        title: 'Next.js + Spring Boot',
+        description: '프론트엔드는 Next.js·TypeScript·Tailwind CSS, 백엔드는 Spring Boot·Java로 구성했습니다.',
+        video: '/woogyeol3',
       },
       {
-        title: '유연한 필터 검색',
-        description: '복합 검색 조건에 대응하는 필터 API를 설계했습니다.',
+        title: 'AWS 배포',
+        description: '서비스를 AWS 환경에 배포·운영할 수 있도록 구성했습니다.',
+        video: '/woogyeol4',
+      },
+      {
+        title: '관·페이지별 안내 구조',
+        description: '고2·고3 전용관, N수생 전용관 등 시설 구분에 맞춰 안내 콘텐츠와 메뉴를 구성했습니다.',
+        video: '/woogyeol5',
+      },
+      {
+        title: 'API 연동 관리 화면',
+        description: '관리자 페이지에서 Spring Boot API와 연동해 운영에 필요한 데이터를 조회·처리할 수 있게 했습니다.',
+        video: '/woogyeol6',
       },
     ],
 
     challenges: [
       {
-        title: '프론트·백엔드 간 API 계약 복잡도',
-        solution: '페이징·에러 형식 등 공통 규약을 정의하고 DTO와 응답 래퍼를 일관되게 적용했습니다.',
+        title: '공개·관리 영역 분리',
+        problem:
+          '일반 사용자에게 노출되는 범위와 운영·관리 기능의 접근 경로를 어떻게 나눌지 초기 설계가 필요했습니다.',
+        solution:
+          '사용자 안내와 운영 기능의 접근 경로를 명확히 나누고, 관리자 진입을 노출 최소화 방식으로 설계했습니다.',
       },
       {
-        title: '스키마 변경 협업',
-        solution: 'Flyway 마이그레이션 스크립트와 리뷰 프로세스로 로컬·스테이징 환경을 맞췄습니다.',
+        title: '풀스택 연동',
+        problem: 'Next.js 프론트엔드와 Spring Boot API 간 계약·환경 설정을 일관되게 맞추는 과제가 있었습니다.',
+        solution: 'Next.js와 Spring Boot 간 API 계약을 정리하고 환경별 설정을 분리했습니다.',
       },
       {
-        title: '검색 조건 확장',
-        solution: '조건 조합을 엔드포인트와 쿼리 빌더 패턴으로 정리해 유지보수성을 높였습니다.',
+        title: '운영 환경 안정성',
+        problem: '실제 운영 트래픽과 배포 흐름에 맞는 인프라 구성이 필요했습니다.',
+        solution: 'AWS 인프라와 배포 파이프라인을 정리해 실사용 트래픽에 대응했습니다.',
       },
     ],
 
     outcomes: [
-      '창업 프로젝트 맥락에서 프로덕션 지향 백엔드 설계 경험',
-      '결제·검색 등 도메인 API 구현 및 연동 경험',
-      'DB 형상 관리 도구를 통한 협업 프로세스 정착',
+      '실제 운영 독서실을 위한 웹 플랫폼 기획·구현 경험',
+      'Next.js와 Spring Boot를 연계한 풀스택 구성 경험',
+      '공개 서비스와 운영 도구를 분리한 정보 구조 설계 경험',
     ],
   },
 }
@@ -179,10 +198,12 @@ export default function ProjectDetailPage() {
     )
   }
 
-  // 우결 또는 Minu 프로젝트인 경우 특별한 레이아웃
+  // 우결·Minu·Roadmap 프로젝트는 동일 계열의 특수 레이아웃 (Roadmap은 Minu와 동일 레이아웃·캐러셀·버튼 코드 경로)
   const isWoogyeol = projectId === '1'
   const isMinu = projectId === '2'
-  const isSpecialLayout = isWoogyeol || isMinu
+  const isRoadmap = projectId === '3'
+  const isSpecialLayout = isWoogyeol || isMinu || isRoadmap
+  const isMinuLike = isMinu || isRoadmap
 
   // Minu 이미지 캐러셀
   const minuImages = Array.from({ length: 16 }, (_, i) => `/${i + 1}.jpg`)
@@ -223,7 +244,7 @@ export default function ProjectDetailPage() {
       {isSpecialLayout ? (
         <>
           {/* 상단 섹션 - 남색 배경, 흰색 글씨 */}
-          <div className="bg-background text-white pt-8 pb-8 px-4 sm:px-6 lg:px-8">
+          <div className="bg-background text-white px-4 sm:px-6 lg:px-8 pt-8 pb-8">
             <motion.div 
               className="max-w-6xl mx-auto"
               variants={containerVariants}
@@ -233,7 +254,7 @@ export default function ProjectDetailPage() {
             >
               {/* 돌아가기 버튼 */}
               <motion.div variants={itemVariants}>
-                <Link 
+                <Link
                   href="/"
                   className="inline-flex items-center gap-2 text-white hover:text-white/80 transition-all duration-200 hover:scale-110 mb-6"
                 >
@@ -245,8 +266,14 @@ export default function ProjectDetailPage() {
               {/* 헤더 */}
               <motion.div className="flex items-center gap-3" variants={itemVariants}>
                 <Image
-                  src={isMinu ? "/minu-logo.svg" : "/woogyeol-logo.png"}
-                  alt={isMinu ? "Minu Logo" : "Woogyeol Logo"}
+                  src={
+                    isMinu
+                      ? '/minu-logo.svg'
+                      : isRoadmap
+                        ? '/images/roadmap-logo.png'
+                        : '/woogyeol-logo.png'
+                  }
+                  alt={isMinu ? 'Minu Logo' : isRoadmap ? 'Roadmap Logo' : 'Woogyeol Logo'}
                   width={36}
                   height={36}
                   className="object-contain"
@@ -260,7 +287,7 @@ export default function ProjectDetailPage() {
           </div>
 
           {/* 하단 섹션 - 옅은 회색 배경 */}
-          <div className="bg-gray-200 text-gray-900 pt-24 pb-24 px-4 sm:px-6 lg:px-8">
+          <div className="bg-gray-200 text-gray-900 px-4 sm:px-6 lg:px-8 pt-24 pb-24">
             <motion.div 
               className="max-w-6xl mx-auto"
               variants={containerVariants}
@@ -269,22 +296,33 @@ export default function ProjectDetailPage() {
               viewport={{ once: true, amount: 0.1 }}
               style={{ willChange: 'opacity, transform' }}
             >
-              <div className={`grid grid-cols-1 lg:grid-cols-2 ${isMinu ? "gap-8" : "gap-12"} items-center`}>
-                {/* 좌측: 텍스트 영역 */}
+              <div
+                className={`grid grid-cols-1 lg:grid-cols-2 ${
+                  isMinuLike ? 'gap-8' : 'gap-12'
+                } items-center`}
+              >
                 <div className="space-y-6">
                   <motion.h2 className="text-2xl font-bold text-gray-900" variants={itemVariants}>
                     프로젝트 개요
                   </motion.h2>
-                  <motion.p className={`text-base text-gray-700 leading-relaxed ${isMinu ? "whitespace-pre-line" : ""}`} variants={itemVariants}>
+                  <motion.p
+                    className={`text-base text-gray-700 leading-relaxed ${
+                      isMinuLike ? 'whitespace-pre-line' : ''
+                    }`}
+                    variants={itemVariants}
+                  >
                     {project.overview}
                   </motion.p>
 
-                  {/* 기술 스택 */}
-                  <motion.div className="flex flex-wrap gap-2 mt-6" variants={itemVariants}>
+                  {/* 기술 스택 — 한 줄 유지(좁은 화면은 가로 스크롤) */}
+                  <motion.div
+                    className="flex flex-nowrap gap-1.5 sm:gap-2 mt-6 overflow-x-auto pb-0.5 -mx-1 px-1 [scrollbar-width:thin]"
+                    variants={itemVariants}
+                  >
                     {project.tech.map((tech: string) => (
-                      <span 
-                        key={tech} 
-                        className="px-4 py-2 bg-background text-white rounded-full text-sm font-medium"
+                      <span
+                        key={tech}
+                        className="shrink-0 whitespace-nowrap px-2.5 py-1.5 sm:px-3 sm:py-2 bg-background text-white rounded-full text-xs sm:text-sm font-medium"
                       >
                         {tech}
                       </span>
@@ -292,7 +330,10 @@ export default function ProjectDetailPage() {
                   </motion.div>
 
                   {/* 버튼들 */}
-                  <motion.div className="flex flex-col sm:flex-row gap-4 mt-8" variants={itemVariants}>
+                  <motion.div
+                    className="flex flex-col sm:flex-row gap-4 mt-8"
+                    variants={itemVariants}
+                  >
                     {isMinu ? (
                       <>
                         <a
@@ -306,6 +347,27 @@ export default function ProjectDetailPage() {
                         </a>
                         <a
                           href="https://github.com/dnd-side-project/dnd-13th-3-backend"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 bg-white text-black border-2 border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-200 cursor-pointer hover:scale-105"
+                        >
+                          <Github className="w-4 h-4" />
+                          GitHub
+                        </a>
+                      </>
+                    ) : isRoadmap ? (
+                      <>
+                        <a
+                          href="https://www.roadmap-edu.kr/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 bg-white text-black border-2 border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-200 cursor-pointer hover:scale-105"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Service
+                        </a>
+                        <a
+                          href="https://github.com/RoadMapSite"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center gap-2 bg-white text-black border-2 border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-200 cursor-pointer hover:scale-105"
@@ -339,9 +401,8 @@ export default function ProjectDetailPage() {
                   </motion.div>
                 </div>
 
-                {/* 우측: 이미지 영역 */}
-                <motion.div className="relative" variants={itemVariants}>
-                  {isMinu ? (
+                <motion.div className="relative w-full" variants={itemVariants}>
+                  {isMinuLike ? (
                     <div className="relative w-full group" style={{ aspectRatio: '5/3' }}>
                       <div className="absolute inset-0 flex items-start justify-end">
                         <div className="relative" style={{ width: '110%', height: '110%', marginTop: '-5%', marginRight: '-5%' }}>
@@ -407,69 +468,74 @@ export default function ProjectDetailPage() {
                 </motion.h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {(isMinu ? [
-                      {
-                        title: '온보딩',
-                        description: '최초 로그인 시 목표와 개인 생활 습관 정보를 입력하는 기능',
-                        video: '/온보딩'
-                      },
-                      {
-                        title: '스크린타임 조회',
-                        description: '개인의 일간, 주간 스크린타임을 조회하고 리포트를 조회할 수 있는 기능',
-                        video: '/스크린타임 조회'
-                      },
-                      {
-                        title: '타이머',
-                        description: '개인 학습에 활용할 수 있는 포모도로 타이머 기능',
-                        video: '/타이머'
-                      },
-                      {
-                        title: '챌린지 생성',
-                        description: '개인 및 공유 챌린지를 생성할 수 있는 기능',
-                        video: '/챌린지 생성'
-                      },
-                      {
-                        title: '친구 초대',
-                        description: '챌린치에 친구를 초대할 수 있는 기능',
-                        video: '/친구 초대'
-                      },
-                      {
-                        title: '챌린지 결과 조회',
-                        description: '목표 대비 스크린타임 결과와 친구간의 랭킹을 확인할 수 있는 기능',
-                        video: '/챌린지 결과 조회'
-                      }
-                    ] : [
-                      {
-                        title: 'Woogyeol 메인 페이지',
-                        description: '청첩장을 생성, 수정, 조회, 삭제할 수 있는 인터페이스',
-                        video: '/woogyeol1'
-                      },
-                      {
-                        title: '청첩장 만들기',
-                        description: '청첩장의 원하는 기능과 테마를 커스터마이징할 수 있는 기능',
-                        video: '/woogyeol2'
-                      },
-                      {
-                        title: '청첩장 공유',
-                        description: 'URL, 카카오톡, QR 코드를 통해 청첩장을 공유할 수 있는 기능',
-                        video: '/woogyeol3'
-                      },
-                      {
-                        title: 'RSVP 관리',
-                        description: '하객들의 참석 여부를 조사하고 엑셀 파일로 관리할 수 있는 기능',
-                        video: '/woogyeol4'
-                      },
-                      {
-                        title: '실시간 포토월',
-                        description: '하객들로부터 실시간으로 축하 사진을 받을 수 있는 기능',
-                        video: '/woogyeol5'
-                      },
-                      {
-                        title: '다크 모드',
-                        description: '청첩장 및 서비스의 색감 반전을 경험할 수 있는 기능',
-                        video: '/woogyeol6'
-                      }
-                    ]).map((feature, index) => (
+                    {(isMinuLike
+                      ? isMinu
+                        ? [
+                            {
+                              title: '온보딩',
+                              description: '최초 로그인 시 목표와 개인 생활 습관 정보를 입력하는 기능',
+                              video: '/온보딩',
+                            },
+                            {
+                              title: '스크린타임 조회',
+                              description: '개인의 일간, 주간 스크린타임을 조회하고 리포트를 조회할 수 있는 기능',
+                              video: '/스크린타임 조회',
+                            },
+                            {
+                              title: '타이머',
+                              description: '개인 학습에 활용할 수 있는 포모도로 타이머 기능',
+                              video: '/타이머',
+                            },
+                            {
+                              title: '챌린지 생성',
+                              description: '개인 및 공유 챌린지를 생성할 수 있는 기능',
+                              video: '/챌린지 생성',
+                            },
+                            {
+                              title: '친구 초대',
+                              description: '챌린치에 친구를 초대할 수 있는 기능',
+                              video: '/친구 초대',
+                            },
+                            {
+                              title: '챌린지 결과 조회',
+                              description: '목표 대비 스크린타임 결과와 친구간의 랭킹을 확인할 수 있는 기능',
+                              video: '/챌린지 결과 조회',
+                            },
+                          ]
+                        : project.features
+                      : [
+                          {
+                            title: 'Woogyeol 메인 페이지',
+                            description: '청첩장을 생성, 수정, 조회, 삭제할 수 있는 인터페이스',
+                            video: '/woogyeol1',
+                          },
+                          {
+                            title: '청첩장 만들기',
+                            description: '청첩장의 원하는 기능과 테마를 커스터마이징할 수 있는 기능',
+                            video: '/woogyeol2',
+                          },
+                          {
+                            title: '청첩장 공유',
+                            description: 'URL, 카카오톡, QR 코드를 통해 청첩장을 공유할 수 있는 기능',
+                            video: '/woogyeol3',
+                          },
+                          {
+                            title: 'RSVP 관리',
+                            description: '하객들의 참석 여부를 조사하고 엑셀 파일로 관리할 수 있는 기능',
+                            video: '/woogyeol4',
+                          },
+                          {
+                            title: '실시간 포토월',
+                            description: '하객들로부터 실시간으로 축하 사진을 받을 수 있는 기능',
+                            video: '/woogyeol5',
+                          },
+                          {
+                            title: '다크 모드',
+                            description: '청첩장 및 서비스의 색감 반전을 경험할 수 있는 기능',
+                            video: '/woogyeol6',
+                          },
+                        ]
+                    ).map((feature, index) => (
                       <motion.div
                         key={index}
                         className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition-all"
@@ -478,7 +544,7 @@ export default function ProjectDetailPage() {
                         {/* 영상 영역 */}
                         <div className="relative w-full h-[24rem] bg-gray-200 flex items-center justify-center">
                           <Image
-                            src={isMinu ? encodeURI(`${feature.video}.gif`) : `${feature.video}.gif`}
+                            src={isMinuLike ? encodeURI(`${feature.video}.gif`) : `${feature.video}.gif`}
                             alt={feature.title}
                             fill
                             className="object-contain"
@@ -516,87 +582,115 @@ export default function ProjectDetailPage() {
                   className="text-2xl font-bold text-gray-900 mb-12 text-center" 
                   variants={itemVariants}
                 >
-                  {isMinu ? '주요 이슈 및 문제 해결' : '기술적 문제 및 해결'}
+                  {isMinuLike ? '주요 이슈 및 문제 해결' : '기술적 문제 및 해결'}
                 </motion.h2>
                 
                 <div className="space-y-8">
-                  {/* 첫 번째 문제 */}
-                  <motion.div 
-                    className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition-all"
-                    variants={itemVariants}
-                  >
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="w-12 h-12 bg-background text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">
-                        1
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-6">
-                          {isMinu ? '필드/데스크 리서치를 통한 사용자 니즈 파악' : '이미지 로딩 속도 문제'}
-                        </h3>
-                        <div className="space-y-4">
-                          <div className="bg-gray-50 border-l-4 border-background p-4 rounded">
-                            <p className="text-base font-semibold text-gray-900 mb-2">
-                              문제
-                            </p>
-                            <p className="text-base text-gray-700 leading-relaxed">
-                              {isMinu 
-                                ? '초기 기획 단계에서 디톡스 어플에 대한 사용자의 니즈를 파악하지 못해 기존의 유사 어플들과의 차이점을 두지 못했습니다.'
-                                : '청첩장 특성 상 관리할 이미지가 많아 AWS S3를 통해 관리하였으나, 이미지 로딩 시 속도가 많이 지연되는 문제가 발생했습니다.'}
-                            </p>
+                  {isRoadmap ? (
+                    project.challenges.map(
+                      (
+                        challenge: { title: string; problem: string; solution: string },
+                        idx: number
+                      ) => (
+                        <motion.div
+                          key={idx}
+                          className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition-all"
+                          variants={itemVariants}
+                        >
+                          <div className="flex items-start gap-4 mb-6">
+                            <div className="w-12 h-12 bg-background text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">
+                              {idx + 1}
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="text-xl font-bold text-gray-900 mb-6">{challenge.title}</h3>
+                              <div className="space-y-4">
+                                <div className="bg-gray-50 border-l-4 border-background p-4 rounded">
+                                  <p className="text-base font-semibold text-gray-900 mb-2">문제</p>
+                                  <p className="text-base text-gray-700 leading-relaxed">{challenge.problem}</p>
+                                </div>
+                                <div className="bg-gray-50 border-l-4 border-green-500 p-4 rounded">
+                                  <p className="text-base font-semibold text-gray-900 mb-2">해결</p>
+                                  <p className="text-base text-gray-700 leading-relaxed">{challenge.solution}</p>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div className="bg-gray-50 border-l-4 border-green-500 p-4 rounded">
-                            <p className="text-base font-semibold text-gray-900 mb-2">
-                              해결
-                            </p>
-                            <p className="text-base text-gray-700 leading-relaxed">
-                              {isMinu
-                                ? '필드 및 데스크 리서치를 수행하여 유사 서비스에 대한 사용자의 리뷰와 행동 패턴을 분석했습니다. 이를 통해 유료화된 주요 기능과 성취감 부족으로 인한 동기부여 부족이라는 사용자의 경험을 인식하게 되었고, 이를 통해 차별화된 minu만의 기능을 기획할 수 있었습니다.'
-                                : '이미지를 바로 저장하지 않고, 450px로 크기를 줄이고 webp 포맷으로 리사이징한 후 저장하도록 하여 이미지 조회 시 로딩 속도를 약 1~2초 단축할 수 있었습니다.'}
-                            </p>
+                        </motion.div>
+                      )
+                    )
+                  ) : (
+                    <>
+                      {/* 첫 번째 문제 */}
+                      <motion.div
+                        className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition-all"
+                        variants={itemVariants}
+                      >
+                        <div className="flex items-start gap-4 mb-6">
+                          <div className="w-12 h-12 bg-background text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">
+                            1
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-xl font-bold text-gray-900 mb-6">
+                              {isMinu ? '필드/데스크 리서치를 통한 사용자 니즈 파악' : '이미지 로딩 속도 문제'}
+                            </h3>
+                            <div className="space-y-4">
+                              <div className="bg-gray-50 border-l-4 border-background p-4 rounded">
+                                <p className="text-base font-semibold text-gray-900 mb-2">문제</p>
+                                <p className="text-base text-gray-700 leading-relaxed">
+                                  {isMinu
+                                    ? '초기 기획 단계에서 디톡스 어플에 대한 사용자의 니즈를 파악하지 못해 기존의 유사 어플들과의 차이점을 두지 못했습니다.'
+                                    : '청첩장 특성 상 관리할 이미지가 많아 AWS S3를 통해 관리하였으나, 이미지 로딩 시 속도가 많이 지연되는 문제가 발생했습니다.'}
+                                </p>
+                              </div>
+                              <div className="bg-gray-50 border-l-4 border-green-500 p-4 rounded">
+                                <p className="text-base font-semibold text-gray-900 mb-2">해결</p>
+                                <p className="text-base text-gray-700 leading-relaxed">
+                                  {isMinu
+                                    ? '필드 및 데스크 리서치를 수행하여 유사 서비스에 대한 사용자의 리뷰와 행동 패턴을 분석했습니다. 이를 통해 유료화된 주요 기능과 성취감 부족으로 인한 동기부여 부족이라는 사용자의 경험을 인식하게 되었고, 이를 통해 차별화된 minu만의 기능을 기획할 수 있었습니다.'
+                                    : '이미지를 바로 저장하지 않고, 450px로 크기를 줄이고 webp 포맷으로 리사이징한 후 저장하도록 하여 이미지 조회 시 로딩 속도를 약 1~2초 단축할 수 있었습니다.'}
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </motion.div>
+                      </motion.div>
 
-                  {/* 두 번째 문제 */}
-                  <motion.div 
-                    className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition-all"
-                    variants={itemVariants}
-                  >
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="w-12 h-12 bg-background text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">
-                        2
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-6">
-                          {isMinu ? '리서치 기반의 AI 피드백 기능 구현' : 'POST 요청 시 과도한 데이터 전송 문제'}
-                        </h3>
-                        <div className="space-y-4">
-                          <div className="bg-gray-50 border-l-4 border-background p-4 rounded">
-                            <p className="text-base font-semibold text-gray-900 mb-2">
-                              문제
-                            </p>
-                            <p className="text-base text-gray-700 leading-relaxed">
-                              {isMinu
-                                ? '필드 리서치 분석 결과 단순한 스크린타임 수치 제공은 사용자에게 일시적인 인지만 줄 뿐, 지속적인 동기부여와 실질적인 생활 패턴의 변화로 이어지지는 못한다는 한계를 발견했습니다.'
-                                : '청첩장 생성 시 모든 값을 한 번에 전송하여 에러 트래킹과 디버깅이 어려웠고, 검증되지 않은 상태에서 요청을 보내는 문제가 있었습니다.'}
-                            </p>
+                      {/* 두 번째 문제 */}
+                      <motion.div
+                        className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition-all"
+                        variants={itemVariants}
+                      >
+                        <div className="flex items-start gap-4 mb-6">
+                          <div className="w-12 h-12 bg-background text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">
+                            2
                           </div>
-                          <div className="bg-gray-50 border-l-4 border-green-500 p-4 rounded">
-                            <p className="text-base font-semibold text-gray-900 mb-2">
-                              해결
-                            </p>
-                            <p className="text-base text-gray-700 leading-relaxed">
-                              {isMinu
-                                ? 'OpenAI GPT API를 연동하여 AI 피드백을 통한 주간 회고 시스템을 구축했습니다. 단순히 일회성 피드백에 그치지 않도록 매주 생성된 피드백 데이터를 DB에 적재하여 관리하였고, 이를 기반으로 지난주 대비 발전 여부를 분석해주는 로직 또한 구현하였습니다. 결과적으로 사용자에게 연속성 있는 성취감을 부여하며 장기적인 디지털 디톡스 참여를 유도할 수 있었습니다.'
-                                : '생성 단계를 나누어 필요한 데이터만 단계별로 전송하도록 API를 개선했습니다. 이를 통해 에러 발생 시 특정 단계에서 확인이 가능해져 디버깅 시간이 단축되었고, 사용자 플로우에도 더 적합한 방식이 되었습니다.'}
-                            </p>
+                          <div className="flex-1">
+                            <h3 className="text-xl font-bold text-gray-900 mb-6">
+                              {isMinu ? '리서치 기반의 AI 피드백 기능 구현' : 'POST 요청 시 과도한 데이터 전송 문제'}
+                            </h3>
+                            <div className="space-y-4">
+                              <div className="bg-gray-50 border-l-4 border-background p-4 rounded">
+                                <p className="text-base font-semibold text-gray-900 mb-2">문제</p>
+                                <p className="text-base text-gray-700 leading-relaxed">
+                                  {isMinu
+                                    ? '필드 리서치 분석 결과 단순한 스크린타임 수치 제공은 사용자에게 일시적인 인지만 줄 뿐, 지속적인 동기부여와 실질적인 생활 패턴의 변화로 이어지지는 못한다는 한계를 발견했습니다.'
+                                    : '청첩장 생성 시 모든 값을 한 번에 전송하여 에러 트래킹과 디버깅이 어려웠고, 검증되지 않은 상태에서 요청을 보내는 문제가 있었습니다.'}
+                                </p>
+                              </div>
+                              <div className="bg-gray-50 border-l-4 border-green-500 p-4 rounded">
+                                <p className="text-base font-semibold text-gray-900 mb-2">해결</p>
+                                <p className="text-base text-gray-700 leading-relaxed">
+                                  {isMinu
+                                    ? 'OpenAI GPT API를 연동하여 AI 피드백을 통한 주간 회고 시스템을 구축했습니다. 단순히 일회성 피드백에 그치지 않도록 매주 생성된 피드백 데이터를 DB에 적재하여 관리하였고, 이를 기반으로 지난주 대비 발전 여부를 분석해주는 로직 또한 구현하였습니다. 결과적으로 사용자에게 연속성 있는 성취감을 부여하며 장기적인 디지털 디톡스 참여를 유도할 수 있었습니다.'
+                                    : '생성 단계를 나누어 필요한 데이터만 단계별로 전송하도록 API를 개선했습니다. 이를 통해 에러 발생 시 특정 단계에서 확인이 가능해져 디버깅 시간이 단축되었고, 사용자 플로우에도 더 적합한 방식이 되었습니다.'}
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </motion.div>
+                      </motion.div>
+                    </>
+                  )}
                 </div>
               </motion.div>
             </div>

@@ -177,8 +177,8 @@ export default function ProjectCardHero({ project }: ProjectCardHeroProps) {
           </div>
         </div>
 
-        <div className="ml-3 sm:ml-5 z-10 mt-4 sm:mt-5 flex flex-col translate-y-2 sm:translate-y-3">
-          <div className="flex flex-wrap gap-1.5 sm:gap-2">
+        <div className="ml-3 sm:ml-5 z-10 mt-4 sm:mt-5 flex w-full min-w-0 flex-col translate-y-2 sm:translate-y-3">
+          <div className="flex w-full min-w-0 flex-wrap gap-1.5 sm:gap-2">
             {project.tech.map((tech) => (
               <span
                 key={tech}
@@ -193,8 +193,8 @@ export default function ProjectCardHero({ project }: ProjectCardHeroProps) {
             ))}
           </div>
 
-          <div className="mt-7 sm:mt-8 ml-4 sm:ml-6">
-            <Link href={project.link || `/project/${project.id}`} className="block max-w-md">
+          <div className="mt-7 sm:mt-8 w-full min-w-0 pr-10 sm:pr-14">
+            <Link href={project.link || `/project/${project.id}`} className="block w-full min-w-0">
               <button
                 type="button"
                 className="w-full py-1 rounded-lg font-bold text-xs sm:text-sm transition-all duration-200 cursor-pointer hover:scale-[1.02] shadow-sm bg-white text-gray-900 border border-gray-200/90 hover:bg-gray-50 leading-tight"

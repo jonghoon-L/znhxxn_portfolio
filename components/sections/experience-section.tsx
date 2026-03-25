@@ -26,8 +26,8 @@ const EXPERIENCES = [
   },
   {
     id: 2,
-    title: '로드맵 입시관리형 독서실 웹 사이트',
-    company: '로드맵 입시관리형 독서실',
+    title: '로드맵 입시 관리형 독서실 웹 사이트',
+    company: '로드맵 입시 관리형 독서실',
     period: '2026.02 ~ 2026.04',
     status: '외주',
     isOngoing: true,

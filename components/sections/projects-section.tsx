@@ -6,15 +6,19 @@ import { motion } from 'framer-motion'
 const PROJECTS = [
   {
     id: 3,
-    title: 'ShowRoomz',
+    title: 'Roadmap',
     description:
-      '인플루언서와 브랜드를 연결하는 마켓플랫폼. 결제·검색·협업에 맞춘 REST API와 DB 형상 관리로 실서비스 런칭을 목표로 개발 중입니다.',
+      '입시 관리형 독서실 Roadmap 웹 사이트\n실제 운영 중인 입시 관리형 독서실을 위한 웹 플랫폼입니다. \n일반 사용자를 위한 안내 페이지와, 이스터에그 방식으로 숨겨진 비즈니스 운영 목적의 관리자 페이지를 제공합니다.',
     image: '/digital-detox-service.jpg',
-    logo: '/icon.svg',
-    tech: ['Spring Boot', 'TypeScript', 'PostgreSQL', 'Flyway', 'AWS', 'PortOne', 'Vercel'],
+    video: '/로드맵1.gif',
+    logo: '/images/roadmap-logo.png',
+    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Spring Boot', 'Java', 'AWS'],
     link: '/project/3',
     infoBgClass: 'bg-gradient-to-br from-sky-100 via-white to-indigo-100',
-    logoPadding: 'p-3',
+    logoPadding: 'p-px',
+    /** transform(translate)으로 상대 이동 — scale 없음으로 잘림 완화 */
+    mediaPaddingClass: 'p-0',
+    mediaInnerClass: 'origin-center -translate-x-5',
   },
   {
     id: 2,
