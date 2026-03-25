@@ -12,9 +12,11 @@ const PROJECT_DETAILS: Record<string, any> = {
     title: 'Woogyeol - 우리 결혼해요',
     subtitle: '커스텀 모바일 청첩장',
     period: '2025.01 ~ 2025.07',
-    description: 'Woogyeol은 사용자가 직접 청첩장을 제작하고 공유할 수 있는 모바일 청첩장 서비스입니다. 참석 여부 조사, 축하 메시지, 실시간 포토월 기능을 통해 결혼 준비부터 당일까지 완전한 디지털 웨딩 솔루션을 제공합니다.',
-    
-    overview: `Woogyeol은 사용자가 직접 청첩장을 제작하고 공유할 수 있는 모바일 청첩장 서비스입니다. 참석 여부 조사, 축하 메시지, 실시간 포토월 기능을 통해 결혼 준비부터 당일까지 완전한 디지털 웨딩 솔루션을 제공합니다.`,
+    description: '커스텀 모바일 청첩장 서비스',
+
+    overview: `커스텀 모바일 청첩장 서비스
+청첩장의 디자인과 기능을 직접 커스터마이징하여 제작할 수 있으며 
+실시간 포토월, RSVP, 축하 메세지를 통해 하객과 소통할 수 있습니다.`,
     
     tech: ['Express.js', 'TypeScript', 'AWS', 'Koyeb', 'MySQL', 'Sentry'],
     
@@ -62,10 +64,10 @@ const PROJECT_DETAILS: Record<string, any> = {
     title: 'Minu - 디지털 디톡스 서비스',
     subtitle: '디지털 디톡스 서비스',
     period: '2024.11 ~ 진행중',
-    description: 'Minu는 디지털 디톡스 서비스로서 개인의 스크린타임을 조회하며 관리할 수 있습니다.',
-    
-    overview: `Minu는 개인의 스크린타임을 관리할 수 있는 디지털 디톡스 서비스입니다. 
-AI 리포트 기능을 통해 자신의 생활 습관에 대해 피드백을 받을 수 있고, 친구들과 디톡스 챌린지를 하며 함께 동기부여를 만들어갈 수 있습니다.`,
+    description: '디지털 디톡스 서비스',
+
+    overview: `디지털 디톡스 서비스
+AI가 분석한 맞춤형 리포트로 나의 사용 습관을 점검하고, 친구들과의 챌린지를 통해 건강한 일상을 함께 만들어갈 수 있습니다.`,
     
     tech: ['Spring Boot', 'Java', 'AWS', 'MySQL', 'GitHub Actions'],
     
@@ -104,7 +106,58 @@ AI 리포트 기능을 통해 자신의 생활 습관에 대해 피드백을 받
       'AI 기술을 활용한 데이터 분석 경험',
       '소셜 기능을 포함한 서비스 설계 경험'
     ]
-  }
+  },
+  '3': {
+    title: 'ShowRoomz',
+    subtitle: '인플루언서 마켓플랫폼',
+    period: '2025.10 ~ 2026.07',
+    description:
+      '인플루언서와 브랜드를 연결하는 마켓플랫폼으로, 캠페인·결제·검색 등 핵심 도메인을 REST API로 설계하고 Flyway 기반 DB 형상 관리와 결제 연동을 구축했습니다.',
+
+    overview: `ShowRoomz는 SNS 인플루언서 기반 마켓 서비스입니다. 브랜드와 크리에이터 간 거래 흐름에 맞춰 API를 설계하고, 전역 페이징 응답 구조로 프론트엔드와의 계약을 단순화했습니다. PortOne을 통한 결제 파이프라인과 다양한 필터 조건을 지원하는 검색 API로 확장 가능한 백엔드를 지향합니다.`,
+
+    tech: ['Spring Boot', 'TypeScript', 'PostgreSQL', 'Flyway', 'AWS', 'PortOne', 'Vercel'],
+
+    features: [
+      {
+        title: '통일된 페이징·응답 구조',
+        description: '목록 API의 응답 스키마를 표준화하여 클라이언트 타입과 로직을 단순화했습니다.',
+      },
+      {
+        title: 'DB 마이그레이션 자동화',
+        description: 'Flyway로 스키마 변경 이력을 관리하고 팀 협업 시 충돌을 줄였습니다.',
+      },
+      {
+        title: '결제 연동',
+        description: 'PortOne API를 활용해 결제 플로우를 구성했습니다.',
+      },
+      {
+        title: '유연한 필터 검색',
+        description: '복합 검색 조건에 대응하는 필터 API를 설계했습니다.',
+      },
+    ],
+
+    challenges: [
+      {
+        title: '프론트·백엔드 간 API 계약 복잡도',
+        solution: '페이징·에러 형식 등 공통 규약을 정의하고 DTO와 응답 래퍼를 일관되게 적용했습니다.',
+      },
+      {
+        title: '스키마 변경 협업',
+        solution: 'Flyway 마이그레이션 스크립트와 리뷰 프로세스로 로컬·스테이징 환경을 맞췄습니다.',
+      },
+      {
+        title: '검색 조건 확장',
+        solution: '조건 조합을 엔드포인트와 쿼리 빌더 패턴으로 정리해 유지보수성을 높였습니다.',
+      },
+    ],
+
+    outcomes: [
+      '창업 프로젝트 맥락에서 프로덕션 지향 백엔드 설계 경험',
+      '결제·검색 등 도메인 API 구현 및 연동 경험',
+      'DB 형상 관리 도구를 통한 협업 프로세스 정착',
+    ],
+  },
 }
 
 export default function ProjectDetailPage() {
