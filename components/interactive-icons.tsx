@@ -23,6 +23,22 @@ export default function InteractiveIcons() {
       pos: { top: '0%', left: '75%' },
       delay: '2s', duration: '7s'
     },
+    // 3b. Next.js
+    {
+      name: 'Next.js',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+      pos: { top: '34%', left: '54%' },
+      delay: '1.8s',
+      duration: '8.5s',
+    },
+    // 3c. React
+    {
+      name: 'React',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+      pos: { top: '76%', left: '72%' },
+      delay: '2.2s',
+      duration: '8.2s',
+    },
     // 4. TypeScript
     { 
       name: 'TypeScript', 

@@ -170,8 +170,8 @@ AI 리포트 기능을 통해 자신의 생활 습관에 대해 피드백을 받
         title: 'Redis In-Memory 및 TTL을 활용한 인증 프로세스 최적화',
         problem:
           '유효기간이 짧은 SMS 인증번호를 메인 DB에 저장하고 주기적으로 삭제하는 방식은 불필요한 디스크 I/O를 발생시켜 서버에 부하를 주고, 검증 응답 속도를 저하시키는 원인이 되었습니다.',
-        solution:
-          'In-Memory 데이터 저장소인 Redis를 도입하여 디스크 접근 없이 메모리에서 즉시 데이터를 조회하도록 설계해 인증 확인 속도를 극대화했습니다. 또한 TTL(Time To Live) 기능을 적용해 만료 시간이 지나면 데이터가 자동 소멸되도록 처리함으로써 메인 DB의 부하 가능성을 차단했습니다.',
+        solution: `In-Memory 데이터 저장소인 Redis를 도입하여 디스크 접근 없이 메모리에서 즉시 데이터를 조회하도록 설계해 인증 확인 속도를 극대화했습니다. 
+또한 TTL(Time To Live) 기능을 적용해 만료 시간이 지나면 데이터가 자동 소멸되도록 처리함으로써 메인 DB의 부하 가능성을 차단했습니다.`,
       },
     ],
 
@@ -202,7 +202,7 @@ export default function ProjectDetailPage() {
     )
   }
 
-  // 우결·Minu·Roadmap 프로젝트는 동일 계열의 특수 레이아웃 (Roadmap 우측은 Minu와 동일 5/3 슬롯 + 정적 이미지)
+  // 우결·Minu·Roadmap 프로젝트는 동일 계열의 특수 레이아웃 (Roadmap 우측: /roadmap_image.jpg)
   const isWoogyeol = projectId === '1'
   const isMinu = projectId === '2'
   const isRoadmap = projectId === '3'
@@ -440,16 +440,14 @@ export default function ProjectDetailPage() {
                     <div className="relative w-full" style={{ aspectRatio: '5/3' }}>
                       <div className="absolute inset-0 flex items-start justify-end">
                         <div
-                          className="relative rounded-none"
+                          className="relative rounded-none translate-x-6 sm:translate-x-10"
                           style={{
-                            width: '120%',
-                            height: '120%',
-                            marginTop: '-10%',
-                            marginRight: '-10%',
+                            width: '100%',
+                            height: '100%',
                           }}
                         >
                           <Image
-                            src="/roadmap1.png"
+                            src="/roadmap_image.jpg"
                             alt="Roadmap Project"
                             fill
                             className="object-contain rounded-none"
@@ -633,11 +631,11 @@ export default function ProjectDetailPage() {
                               <div className="space-y-4">
                                 <div className="bg-gray-50 border-l-4 border-background p-4 rounded">
                                   <p className="text-base font-semibold text-gray-900 mb-2">문제</p>
-                                  <p className="text-base text-gray-700 leading-relaxed">{challenge.problem}</p>
+                                  <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line">{challenge.problem}</p>
                                 </div>
                                 <div className="bg-gray-50 border-l-4 border-green-500 p-4 rounded">
                                   <p className="text-base font-semibold text-gray-900 mb-2">해결</p>
-                                  <p className="text-base text-gray-700 leading-relaxed">{challenge.solution}</p>
+                                  <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line">{challenge.solution}</p>
                                 </div>
                               </div>
                             </div>
