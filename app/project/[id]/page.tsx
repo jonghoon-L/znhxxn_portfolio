@@ -453,12 +453,13 @@ export default function ProjectDetailPage() {
                     </div>
                   ) : (
                     <Image
-                      src="/woogyeol-photo.png"
+                      src="/woogyeol-photo.webp"
                       alt="Woogyeol Project"
                       width={600}
                       height={600}
                       className="object-contain w-full h-auto"
-                      loading="lazy"
+                      priority
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   )}
                 </motion.div>
