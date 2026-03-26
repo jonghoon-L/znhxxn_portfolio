@@ -18,7 +18,7 @@ const PROJECTS = [
     logoPadding: 'p-px',
     /** transform(translate)으로 상대 이동 — scale 없음으로 잘림 완화 */
     mediaPaddingClass: 'p-0',
-    mediaInnerClass: 'origin-center -translate-x-5',
+    mediaInnerClass: 'origin-center -translate-x-5 -translate-y-10',
   },
   {
     id: 2,
