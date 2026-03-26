@@ -37,7 +37,7 @@ export default function HeroSection({ onProjectsClick }: HeroSectionProps) {
 
   return (
     <>
-      <section className="relative min-h-[90vh] pt-32 pb-32 px-4 sm:px-6 lg:px-8 bg-background flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] pt-32 pb-40 px-4 sm:px-6 lg:px-8 bg-background flex items-center overflow-hidden">
         
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full z-10">
           
