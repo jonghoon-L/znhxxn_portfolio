@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: '포트폴리오 | Backend Developer',
+  title: 'Portfolio',
   description: '백엔드 개발자 이종훈의 포트폴리오 웹사이트입니다.',
   generator: 'v0.app',
   icons: {

@@ -52,7 +52,7 @@ export default function HeroSection({ onProjectsClick }: HeroSectionProps) {
                 이종훈
               </h1>
               <p className="text-2xl sm:text-3xl text-white font-semibold">
-                Backend Developer
+                Full-stack Developer
               </p>
             </motion.div>
             
@@ -60,7 +60,7 @@ export default function HeroSection({ onProjectsClick }: HeroSectionProps) {
               className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl"
               variants={itemVariants}
             >
-              사용자에게 더 나은 경험을 제공하기 위해 효율적인 API 설계를 고민하는 백엔드 개발자입니다.
+              끊임없이 사용자의 실제 피드백을 수용하며, 최적화를 통해 서비스의 가치를 높이는 풀스택 개발자입니다.
             </motion.p>
 
             <motion.div 
