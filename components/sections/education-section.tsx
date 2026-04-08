@@ -11,14 +11,14 @@ export default function EducationSection({ titleRef }: EducationSectionProps) {
     <section>
       <div
         ref={titleRef as React.RefObject<HTMLDivElement>}
-        className="bg-background pt-12 pb-8"
+        className="bg-gray-200 pt-12 pb-4"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white text-center">Education</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center">Education</h2>
         </div>
       </div>
 
-      <div className="bg-background pt-6 pb-20">
+      <div className="bg-gray-200 pt-8 pb-32">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className="
