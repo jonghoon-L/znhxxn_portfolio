@@ -8,7 +8,7 @@ const PROJECTS = [
     id: 3,
     title: 'Roadmap',
     description:
-      '입시 관리형 독서실 Roadmap 웹 사이트\n실제 운영 중인 입시 관리형 독서실을 위한 웹 플랫폼입니다. \n일반 사용자를 위한 안내 페이지와, 이스터에그 방식으로 숨겨진 비즈니스 운영 목적의 관리자 페이지를 제공합니다.',
+      '입시 관리형 독서실 Roadmap 웹/관리자 플랫폼\n실제 운영 중인 입시 관리형 독서실을 위한 웹 사이트입니다. \n일반 사용자를 위한 안내 페이지와, 이스터에그 방식으로 숨겨진 비즈니스 운영 목적의 관리자 페이지를 제공합니다.',
     image: '/digital-detox-service.jpg',
     video: '/로드맵1.gif',
     logo: '/images/roadmap-logo.png',
