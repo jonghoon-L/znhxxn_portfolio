@@ -13,22 +13,17 @@ export default function EducationSection({ titleRef }: EducationSectionProps) {
         ref={titleRef as React.RefObject<HTMLDivElement>}
         className="bg-gray-200 pt-12 pb-4"
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center">Education</h2>
+        <div className="mx-auto flex max-w-6xl items-center justify-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold text-gray-900 sm:text-3xl">Education</h2>
         </div>
       </div>
 
-      <div className="bg-gray-200 pt-8 pb-32">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-gray-200 pb-32 pt-8">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div
             className="
-              relative w-full overflow-hidden rounded-xl
-              border border-zinc-700/80 border-l-4 border-l-indigo-500
-              bg-gradient-to-br from-zinc-800/85 via-zinc-900/90 to-zinc-950
-              p-5 sm:p-6
-              shadow-2xl shadow-black/50
-              ring-1 ring-inset ring-white/[0.08]
-              [box-shadow:0_25px_50px_-12px_rgba(0,0,0,0.55),inset_0_1px_0_0_rgba(255,255,255,0.06),4px_0_28px_-6px_rgba(99,102,241,0.45)]
+              relative w-full overflow-hidden rounded-xl border border-gray-200
+              border-l-4 border-l-blue-500 bg-white p-5 shadow-md sm:p-6
             "
           >
             <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:gap-8">
@@ -45,13 +40,13 @@ export default function EducationSection({ titleRef }: EducationSectionProps) {
               </div>
 
               <div className="min-w-0 flex-1 text-center lg:text-left">
-                <h3 className="text-lg font-bold leading-tight text-white sm:text-xl lg:text-2xl">
+                <h3 className="text-lg font-bold leading-tight text-gray-900 sm:text-xl lg:text-2xl">
                   단국대학교(학사)
                 </h3>
-                <p className="mt-1 text-sm font-semibold text-zinc-400 sm:text-base">
+                <p className="mt-1 text-sm font-semibold text-gray-800 sm:text-base">
                   소프트웨어학과
                 </p>
-                <p className="mt-2 text-xs tabular-nums text-zinc-500 sm:text-sm">
+                <p className="mt-2 text-xs tabular-nums text-gray-600 sm:text-sm">
                   2019.03 ~ 2026.02
                 </p>
               </div>
