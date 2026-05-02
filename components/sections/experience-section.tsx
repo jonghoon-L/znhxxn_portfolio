@@ -16,21 +16,6 @@ const BADGE_STYLES: Record<string, string> = {
 const EXPERIENCES = [
   {
     id: 1,
-    title: "B2C/B2B 인플루언서 마켓 서비스 'ShowRoomz' 창업",
-    company: '단국대학교 창업지원센터',
-    period: '2025.10 ~ 2026.05',
-    status: '예비 창업',
-    isOngoing: true,
-    role: '공동 창업, 백엔드 DB 구조 설계 및 REST API 개발',
-    achievements: [
-      '프론트엔드 개발자의 타입 로직 간소화를 위한 전역 페이징 응답 구조 통일',
-      'Flyway 도입을 통한 DB 형상 관리 자동화 및 협업 안정성 확보',
-      'PortOne API 연동을 통한 클라이언트 결제 파이프라인 구축',
-      '다양한 검색 조건에 유연하게 대응할 수 있는 확장성 높은 필터 API 설계'
-    ]
-  },
-  {
-    id: 2,
     title: "입시 관리형 독서실 통합 플랫폼 'Roadmap' 구축 및 운영",
     company: 'Roadmap 입시 관리형 독서실',
     period: '2026.02 ~ 2026.04',
@@ -42,6 +27,21 @@ const EXPERIENCES = [
       '실제 학원 비즈니스 프로세스를 반영하여 등록 및 상담 예약, 후기 시스템 구축',
       'Solapi 기반의 SMS 본인 인증 로직 구현으로 사용자 온보딩 간편화',
       '이스터에그 라우팅 설계를 활용한 관리자 페이지 은닉 및 시스템 내부 보안성 확보'
+    ]
+  },
+  {
+    id: 2,
+    title: "B2C/B2B 인플루언서 마켓 서비스 'ShowRoomz' 예비 창업",
+    company: '단국대학교 창업지원센터',
+    period: '2025.10 ~ 2026.04',
+    status: '예비 창업',
+    isOngoing: false,
+    role: '예비 창업 기획, 백엔드 DB 구조 설계 및 REST API 개발',
+    achievements: [
+      '프론트엔드 개발자의 타입 로직 간소화를 위한 전역 페이징 응답 구조 통일',
+      'Flyway 도입을 통한 DB 형상 관리 자동화 및 협업 안정성 확보',
+      'PortOne API 연동을 통한 클라이언트 결제 파이프라인 구축',
+      '다양한 검색 조건에 유연하게 대응할 수 있는 확장성 높은 필터 API 설계'
     ]
   },
   {
