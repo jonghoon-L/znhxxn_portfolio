@@ -47,7 +47,7 @@ export default function EducationSection({ titleRef }: EducationSectionProps) {
                   AL
                 </p>
                 <p className="mt-2 text-xs tabular-nums text-gray-600 sm:text-sm">
-                  2026.04.30
+                  2026.04.25
                 </p>
               </div>
             </div>
